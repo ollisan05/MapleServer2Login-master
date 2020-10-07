@@ -1,0 +1,4 @@
+bin/
+obj/
+/packages/
+MapleServer2.sln.DotSettings.*

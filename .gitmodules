@@ -1,0 +1,3 @@
+[submodule "MaplePacketLib2"]
+	path = MaplePacketLib2
+	url = https://github.com/Ochi-rasu/MaplePacketLib2.git

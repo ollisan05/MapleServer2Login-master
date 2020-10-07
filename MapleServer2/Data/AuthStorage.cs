@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace MapleServer2.Data {
+    // TODO: This is mostly temporary while I think about how auth really should work
+    // It's mostly just required to pass login data to GameSession (which is why it's static)
+    public static class AuthStorage {
+        private static readonly Dictionary<long, AuthData> tokenStorage = new Dictionary<long, AuthData>();
+
+        public static AuthData GetData(long accountId) {
+            Console.WriteLine("Get auth data for " + accountId);
+            return tokenStorage.GetValueOrDefault(accountId);
+        }
+
+        public static void SetData(long accountId, AuthData data) {
+            Console.WriteLine("Set auth data for " + accountId);
+            tokenStorage[accountId] = data;
+        }
+    }
+
+    public class AuthData {
+        public int TokenA;
+        public int TokenB;
+        public long CharacterId;
+    }
+}
